@@ -54,7 +54,7 @@ class List:
         correntNode = self.firstNode
         string = "A lista é "
         while correntNode is not None:
-            string += str( " "+correntNode.getData() )
+            string += str(" "+correntNode.getData())
             correntNode = correntNode.getNextNode()
         return string
 
@@ -65,7 +65,7 @@ class List:
             self.firstNode = self.lastNode = newNode
         else: #insersão para lista não vazia
             newNode.setNextNode(self.firstNode)
-            self.firstNode  =  newNode
+            self.firstNode = newNode
 
     def insertAtEnd(self, value):
         #insere no final da lista
@@ -110,48 +110,48 @@ class List:
 ######################### começando a brincar con listas encadeadas ##########################
 ##############################################################################################
 
-def instuctions():
-    #imprime instuções para usuário
-    print("Ente com uma opção: \n"
-          "1 - Para insetir no inicio da lista\n"
-          "2 - Para inserir no final da lista\n"
-          "3 - Para deletar no começo da lista\n"
-          "4 - Para deletar no final da lista\n"
-          "5 - Para sair")
-
-listaObjetos = List() #instanciando um objeto
-instuctions()
-choice = input("? ")
-
-while choice !="5":
-    if choice =="1":
-        listaObjetos.insertAtBegin(input("Entre com o valor: "))
-        print(listaObjetos.imprimir())
-    elif choice == "2":
-        listaObjetos.insertAtEnd(input("Entre com o valor: "))
-        print(listaObjetos.imprimir())
-    elif choice == "3":
-        try:
-            value = listaObjetos.removeFromBegin()
-        except IndexError as message:
-            print("Falha na operação "+message)
-        else:
-            print(value +" Valor removido")
-            print(listaObjetos.imprimir())
-    elif choice == "4":
-        try:
-            value = listaObjetos.removeFromEnd()
-        except IndexError as message:
-            print("Falha na operação "+ message)
-        else:
-            print(value+" removido da lista")
-            print(listaObjetos.imprimir())
-    else:
-        print("Operação inválida: "+choice)
-    instuctions()
-    choice = input("\n? ")
-print("Fim do programa")
-
+# def instuctions():
+#     #imprime instuções para usuário
+#     print("Ente com uma opção: \n"
+#           "1 - Para insetir no inicio da lista\n"
+#           "2 - Para inserir no final da lista\n"
+#           "3 - Para deletar no começo da lista\n"
+#           "4 - Para deletar no final da lista\n"
+#           "5 - Para sair")
+#
+# listaObjetos = List() #instanciando um objeto
+# instuctions()
+# choice = input("? ")
+#
+# while choice !="5":
+#     if choice =="1":
+#         listaObjetos.insertAtBegin(input("Entre com o valor: "))
+#         print(listaObjetos.imprimir())
+#     elif choice == "2":
+#         listaObjetos.insertAtEnd(input("Entre com o valor: "))
+#         print(listaObjetos.imprimir())
+#     elif choice == "3":
+#         try:
+#             value = listaObjetos.removeFromBegin()
+#         except IndexError as message:
+#             print("Falha na operação ")
+#         else:
+#             print(value +" Valor removido")
+#             print(listaObjetos.imprimir())
+#     elif choice == "4":
+#         try:
+#             value = listaObjetos.removeFromEnd()
+#         except IndexError as message:
+#             print("Falha na operação ")
+#         else:
+#             print(value+" removido da lista")
+#             print(listaObjetos.imprimir())
+#     else:
+#         print("Operação inválida: "+choice)
+#     instuctions()
+#     choice = input("\n? ")
+# print("Fim do programa")
+#
 
 
 
